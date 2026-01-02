@@ -32,6 +32,8 @@ class NetworkConnectivityObserver(context: Context) {
     init {
         val request = NetworkRequest.Builder()
             .addCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)
+            .addTransportType(NetworkCapabilities.TRANSPORT_CELLULAR)
+            .addTransportType(NetworkCapabilities.TRANSPORT_WIFI)
             .addCapability(NetworkCapabilities.NET_CAPABILITY_NOT_RESTRICTED)
             .build()
         
@@ -73,5 +75,5 @@ class NetworkConnectivityObserver(context: Context) {
         } catch (e: Exception) {
             false
         }
-    }
-}
+    }r
+}t
